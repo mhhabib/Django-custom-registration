@@ -1,0 +1,29 @@
+{% extends "base/base.html" %}
+{% block title %} Login here {% endblock %}
+{% block content %}
+<div class="ui two column centered grid">
+  <div class="column registration-page">
+    <div class="ui horizontal divider op-head">
+        <h3>Login here</h3>
+    </div> 
+    <form class="ui form validation" method="POST">
+        {% csrf_token %}
+        <div class="field">
+            <label>Username</label>
+            <input name="username" type="text" placeholder="joeschmoe">
+        </div>
+        <div class="field">
+            <label>Password</label>
+            <input name="password" type="password">
+        </div>
+        <button class="fluid ui inverted green button">Login</button>
+         {% for message in messages %}
+          <div class="alert alert-success">
+              <p style="color: coral; text-align: center;">{{ message }}</p>
+          </div>
+        {% endfor %}
+    </form>
+    <p class="direction-section">Not registered yet? <a href="{% url 'register' %}">register</a> from here. Forgot password? <a href="{% url 'reset_password' %}">reset</a> now</p>
+  </div>
+</div>
+{% endblock %}

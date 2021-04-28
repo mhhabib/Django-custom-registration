@@ -1,0 +1,15 @@
+{% extends "base/base.html" %}
+{% block title %} Welcome home {% endblock %}
+{% block content %}
+<div class="ui two column centered grid">
+  <div class="column index-layout">
+    <p class="user-layout">Hello {{request.user|title }}! <span class="logout"><a href="{% url 'logout' %}">Logout</a></span></p>
+  </div>
+</div>
+
+<div class="ui raised very padded text container segment">
+  <h2 class="ui header">Dig drive about Django Framework</h2>
+  <div class="ui horizontal divider">~</div> 
+  
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base/base.html" %}
+{% block title %} Register here {% endblock %}
+{% block content %}
+
+<div class="ui two column centered grid">
+  <div class="column registration-page">
+    <div class="ui horizontal divider op-head">
+        <h3>Register here</h3>
+    </div> 
+    <form class="ui form validation" method="POST">
+        {% csrf_token %}
+        {% for field in form %}
+            
+            <div class="field">
+                <label>{{ field.label_tag }}</label>
+                {{ field }}
+                {% for error in field.errors %}
+                <p style="color: red">{{ error }}</p>
+                {% endfor %}
+            </div>
+        {% endfor %}
+        <button class="fluid ui inverted green button">Sign Up</button>
+    </form>
+    <p class="direction-section">Already registered user? <a href="{% url 'login' %}">Login</a> from here</p>
+  </div>
+</div>
+
+{% endblock %}

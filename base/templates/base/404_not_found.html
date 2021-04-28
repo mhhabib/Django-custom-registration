@@ -1,0 +1,21 @@
+{% extends "base/base.html" %}
+{% block title %} Oops! page not found!{% endblock %}
+{% block content %}
+<div class="ui grid middle aligned segment brown inverted" style="height: 100%; margin: 0;">
+  <div class="ui column center aligned">
+    <div class="ui inverted statistic">
+      <div class="value">404</div>
+      <div class="label">Error</div>
+    </div>
+
+    <div class="ui message brown inverted">
+      <div class="header">Your link</div>
+      <p>Not found</p>
+    </div>
+
+    <div class="ui inverted statistic">
+      <div class="label"><a href="{% url 'index' %}" style="color: rgb(100, 185, 100);">#Back Home</a></div>
+    </div>
+  </div>
+</div>
+{% endblock %}
