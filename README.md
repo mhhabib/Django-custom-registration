@@ -5,4 +5,4 @@ A Django application contains with full features custom login, registation and f
 To design this application I used [Semantic UI](https://semantic-ui.com/) library which is super cool to design.
 
 ### Example pictures of the application
-![Collage](https://user-images.githubusercontent.com/17263976/116363234-bb530000-a824-11eb-8135-be91a647db55.PNG)
+![Collage](https://user-images.githubusercontent.com/17263976/116363500-0240f580-a825-11eb-898c-ace37924c77c.PNG)
